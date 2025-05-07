@@ -13,7 +13,7 @@ def insert_data(data: dict, account_id: int = None):
     link = data['link']
     network = data['network']
     date = data['date']
-    date_added_to_db = datetime.now()
+    date_added_to_db = datetime.utcnow()
     if date == 'no date':
         date = date_added_to_db
     post_text = data.get('text', '')
